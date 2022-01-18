@@ -1,6 +1,7 @@
 package Main;
 
-import Objetos.*;
+import Objetos.Serie;
+import Objetos.Videojuego;
 
 public class MainApp {
 
