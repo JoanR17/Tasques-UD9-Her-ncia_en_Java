@@ -44,7 +44,7 @@ public class MainApp {
 		
 		System.out.println("Hay " + entregados + " articulos entregados");
 		
-		
+		//Averiguar que serie tiene más temporadas y que videojuego tiene más horas
 		
 		int serieMasTemporadas = 0;
 		int videojuegoMasHoras = 0;
