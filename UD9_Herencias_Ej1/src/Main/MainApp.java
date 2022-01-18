@@ -36,7 +36,7 @@ public class MainApp {
 		}
 		
 		System.out.println("La suma del precio de todos los electrodomesticos es: " + sumaE);
-		System.out.println("La suma del precio de todos los electrodomesticos es: " + sumaL);
-		System.out.println("La suma del precio de todos los electrodomesticos es: " + sumaT);
+		System.out.println("La suma del precio de todos las lavadoras es: " + sumaL);
+		System.out.println("La suma del precio de todos las televisiones es: " + sumaT);
 	}
 }
