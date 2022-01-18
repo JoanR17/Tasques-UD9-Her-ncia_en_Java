@@ -20,8 +20,6 @@ public class MainApp {
 		videojuegos[2] = new Videojuego("League of Legends", "MOBA","Riot Games", 300);
 		videojuegos[3] = new Videojuego("The Lasty Of Us", "Zombies", "Naughty Dog", 50);
 		videojuegos[4] = new Videojuego("The Lasty Of Us II", "Zombies", "Naughty Dog", 70);
-		
-		System.out.println(videojuegos[1].compareTo(videojuegos[2]));
 
 	}
 
