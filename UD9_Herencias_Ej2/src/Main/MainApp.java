@@ -21,40 +21,47 @@ public class MainApp {
 		videojuegos[3] = new Videojuego("The Lasty Of Us", "Zombies", "Naughty Dog", 50);
 		videojuegos[4] = new Videojuego("The Lasty Of Us II", "Zombies", "Naughty Dog", 70);
 		
-		series[1].isEntregado();
-		series[3].isEntregado();
-		videojuegos[2].isEntregado();
-		videojuegos[4].isEntregado();
+		series[1].entregar();
+		series[3].entregar();
+		videojuegos[2].entregar();
+		videojuegos[4].entregar();
 		
 		//Recorrer los array para contar cuantos hay entregados y devolverlos
 		
-		int entregados = 0;
-		
-		for(int i = 0; i < series.length; i++) {
-			if (series[i].isEntregado()) {
-				entregados++;
-				series[i].devolver();
-			}
-			
-			if (videojuegos[i].isEntregado()) {
-				entregados++;
-				videojuegos[i].devolver();
+		int entregadosSeries = 0;
+		int entregadosVideojuegos = 0;
+		for (Serie serie : series) 
+		{
+			if (serie.isEntregado()) 
+			{
+				entregadosSeries++;
+				serie.devolver();
 			}
 		}
 		
-		System.out.println("Hay " + entregados + " articulos entregados");
+		for (Videojuego videojuego : videojuegos) 
+		{
+			if (videojuego.isEntregado()) 
+			{
+				entregadosVideojuegos++;
+				videojuego.devolver();
+			}
+		}
 		
-		
+		System.out.println("Hay " + entregadosSeries + " series entregadas");
+		System.out.println("Hay " + entregadosVideojuegos + " videojuegos entregados");
 		
 		int serieMasTemporadas = 0;
 		int videojuegoMasHoras = 0;
 		
 		for(int i = 1; i < series.length; i++) {
-			if (series[i].compareTo(series[serieMasTemporadas])) {
+			if (series[i].compareTo(series[serieMasTemporadas])) 
+			{
 				serieMasTemporadas = i;
 			}
 			
-			if (videojuegos[i].compareTo(videojuegos[videojuegoMasHoras])) {
+			if (videojuegos[i].compareTo(videojuegos[videojuegoMasHoras])) 
+			{
 				videojuegoMasHoras = i;
 			}
 		} 
