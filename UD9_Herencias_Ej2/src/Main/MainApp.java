@@ -60,6 +60,9 @@ public class MainApp {
 				videojuegoMasHoras = i;
 			}
 		} 
+		
+		System.out.println(series[serieMasTemporadas]);
+		System.out.println(videojuegos[videojuegoMasHoras]);
 	}
 
 }
