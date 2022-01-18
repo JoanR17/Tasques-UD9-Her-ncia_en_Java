@@ -17,9 +17,11 @@ public class MainApp {
 		
 		videojuegos[0] = new Videojuego();
 		videojuegos[1] = new Videojuego("League of Legends", 300);
-		videojuegos[2] = new Videojuego("Valorant", "Shooter","Riot Games", 300);
-		videojuegos[3] = new Videojuego("The Last Of Us", "Zombies", "Naughty Dog", 50);
-		videojuegos[4] = new Videojuego("Kingdom Hearts", "Acción", "Square Enix/Disney", 70);
+		videojuegos[2] = new Videojuego("League of Legends", "MOBA","Riot Games", 300);
+		videojuegos[3] = new Videojuego("The Lasty Of Us", "Zombies", "Naughty Dog", 50);
+		videojuegos[4] = new Videojuego("The Lasty Of Us II", "Zombies", "Naughty Dog", 70);
+		
+		System.out.println(videojuegos[1].compareTo(videojuegos[2]));
 		
 		System.out.println(series[1].isEntregado());
 		System.out.println(series[3].isEntregado());
@@ -44,22 +46,20 @@ public class MainApp {
 		
 		System.out.println("Hay " + entregados + " articulos entregados");
 		
-		//Averiguar que serie tiene más temporadas y que videojuego tiene más horas
+		
 		
 		int serieMasTemporadas = 0;
 		int videojuegoMasHoras = 0;
 		
-		/*for(int i = 1; i < series.length; i++) {
+		for(int i = 1; i < series.length; i++) {
 			if (series[i].compareTo(series[serieMasTemporadas])) {
-				entregados++;
-				series[i].devolver();
+				serieMasTemporadas = i;
 			}
 			
-			if (videojuegos[i].isEntregado()) {
-				entregados++;
-				videojuegos[i].devolver();
+			if (videojuegos[i].compareTo(videojuegos[videojuegoMasHoras])) {
+				videojuegoMasHoras = i;
 			}
-		} */
+		} 
 	}
 
 }
