@@ -21,12 +21,10 @@ public class MainApp {
 		videojuegos[3] = new Videojuego("The Lasty Of Us", "Zombies", "Naughty Dog", 50);
 		videojuegos[4] = new Videojuego("The Lasty Of Us II", "Zombies", "Naughty Dog", 70);
 		
-		System.out.println(videojuegos[1].compareTo(videojuegos[2]));
-		
-		System.out.println(series[1].isEntregado());
-		System.out.println(series[3].isEntregado());
-		System.out.println(videojuegos[2].isEntregado());
-		System.out.println(videojuegos[4].isEntregado());
+		series[1].isEntregado();
+		series[3].isEntregado();
+		videojuegos[2].isEntregado();
+		videojuegos[4].isEntregado();
 		
 		//Recorrer los array para contar cuantos hay entregados y devolverlos
 		
