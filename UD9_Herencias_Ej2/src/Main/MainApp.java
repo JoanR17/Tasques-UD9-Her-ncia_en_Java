@@ -66,8 +66,8 @@ public class MainApp {
 			}
 		} 
 		
-		System.out.println(series[serieMasTemporadas]);
-		System.out.println(videojuegos[videojuegoMasHoras]);
+		System.out.println("\nLa serie con mas temporadas es " + series[serieMasTemporadas].getTitulo() + " con " + series[serieMasTemporadas].getNumTemporadas() + " temporadas.");
+		System.out.println("El videojuego con mas horas estimadas es " + videojuegos[videojuegoMasHoras].getTitulo() + " con " + videojuegos[videojuegoMasHoras].getHorasEstimadas() + " horas.");
 	}
 
 }

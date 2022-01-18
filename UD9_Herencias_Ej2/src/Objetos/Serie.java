@@ -92,8 +92,11 @@ public class Serie implements Entregable{
 	@Override
 	public boolean compareTo(Object object) 
 	{
+		if(this.numTemporadas > ((Serie)object).getNumTemporadas())
+		{
+			return true;
+		}
 		return false;
-		
 	}
 	
 }
