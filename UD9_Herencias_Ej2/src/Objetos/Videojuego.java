@@ -1,6 +1,6 @@
 package Objetos;
 
-public class Videojuego {
+public class Videojuego implements Entregable {
 	
 	private String titulo, genero, compania;
 	private int horasEstimadas;
@@ -69,6 +69,31 @@ public class Videojuego {
 	public String toString() {
 		return "Videojuego [titulo=" + titulo + ", genero=" + genero + ", compania=" + compania + ", horasEstimadas="
 				+ horasEstimadas + ", entregado=" + entregado + "]";
+	}
+
+	@Override
+	public void entregar() 
+	{
+		this.entregado = true;
+	}
+
+	@Override
+	public void devolver() 
+	{
+		this.entregado = false;
+	}
+
+	@Override
+	public boolean isEntregado() 
+	{
+		return this.entregado;
+	}
+
+	@Override
+	public void compareTo(Object object) 
+	{
+		// TODO Auto-generated method stub
+		
 	}
 	
 }
