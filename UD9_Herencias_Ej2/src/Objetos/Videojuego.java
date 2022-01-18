@@ -90,9 +90,14 @@ public class Videojuego implements Entregable {
 	}
 
 	@Override
-	public void compareTo(Object object) 
+	public boolean compareTo(Object object) 
 	{
-		// TODO Auto-generated method stub
+		System.out.println(object);
+		/*if(this.horasEstimadas > )
+		{
+			return true;
+		}*/
+		return false;
 		
 	}
 	

@@ -90,9 +90,9 @@ public class Serie implements Entregable{
 	}
 
 	@Override
-	public void compareTo(Object object) 
+	public boolean compareTo(Object object) 
 	{
-		// TODO Auto-generated method stub
+		return false;
 		
 	}
 	
