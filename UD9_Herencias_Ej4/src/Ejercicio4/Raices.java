@@ -13,21 +13,21 @@ public class Raices {
 	}
 	
 	public void obtenerRaices() {
-		double raiz1 = ((-b + Math.sqrt(getDiscriminate())) / (2*a));
-		double raiz2 = ((-b - Math.sqrt(getDiscriminate())) / (2*a));
+		double raiz1 = (-b + Math.sqrt(getDiscriminate())) / (2*a);
+		double raiz2 = (-b - Math.sqrt(getDiscriminate())) / (2*a);
 		
 		System.out.println("La primera solución es: " + raiz1);
 		System.out.println("La segunda solución es: " + raiz2);
 	}
 	
 	public void obtenerRaiz() {
-		double raiz = ((-b) / (2*a));
+		double raiz = (-b) / (2*a);
 		
 		System.out.println("La solución es: " + raiz);
 	}
 	
 	public double getDiscriminate() {
-		return (Math.pow(b, 2) - (4*a*c));
+		return Math.pow(b, 2) - (4*a*c);
 	}
 	
 	public boolean tieneRaices() {
