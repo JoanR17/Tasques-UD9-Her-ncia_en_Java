@@ -92,13 +92,11 @@ public class Videojuego implements Entregable {
 	@Override
 	public boolean compareTo(Object object) 
 	{
-		System.out.println(object);
-		/*if(this.horasEstimadas > )
+		if(this.horasEstimadas > ((Videojuego)object).getHorasEstimadas())
 		{
 			return true;
-		}*/
+		}
 		return false;
-		
 	}
 	
 }
