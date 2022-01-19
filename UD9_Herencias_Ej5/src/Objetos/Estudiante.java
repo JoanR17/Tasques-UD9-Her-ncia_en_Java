@@ -37,7 +37,7 @@ public class Estudiante extends Persona {
 	 * Funcion para calcular la probabilidad de hacer novillos
 	 * @return
 	 */
-	private boolean calcularProbabilidad() 
+	public boolean calcularProbabilidad() 
 	{
 		return (0.5 > Math.random());
 	}

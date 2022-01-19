@@ -37,6 +37,9 @@ public abstract class Persona {
 		}
 		return 'H';
 	}
+	
+	//Funcion que debe estar en la clases hijas
+	public abstract boolean calcularProbabilidad();
 
 
 	//Getters y Setters

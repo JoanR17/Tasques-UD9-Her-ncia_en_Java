@@ -37,7 +37,7 @@ public class Profesor extends Persona {
 	 * Funcion para calcular la probabilidad de que el profesor venga 
 	 * @return
 	 */
-	private boolean calcularProbabilidad() 
+	public boolean calcularProbabilidad() 
 	{
 		return (0.2 < Math.random());
 	}
