@@ -1,3 +1,6 @@
+/**
+ * @author ADRIAN
+ */
 package Objetos;
 
 public interface Entregable {

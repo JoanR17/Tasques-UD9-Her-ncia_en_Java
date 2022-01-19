@@ -1,3 +1,6 @@
+/**
+ * @author ADRIAN y JOAN
+ */
 package Main;
 
 import Objetos.Serie;

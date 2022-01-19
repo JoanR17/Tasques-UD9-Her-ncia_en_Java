@@ -1,3 +1,6 @@
+/**
+ * @author JOAN
+ */
 package Objetos;
 
 public class Serie implements Entregable{
