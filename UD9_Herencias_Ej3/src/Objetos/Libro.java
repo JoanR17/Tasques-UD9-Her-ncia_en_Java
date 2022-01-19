@@ -1,9 +1,16 @@
+/**
+ * @author JOAN
+ */
 package Objetos;
 
 public class Libro {
 	
+	//Atributos
+	
 	private String isbn, titulo, autor;
 	private int numPaginas;
+	
+	//Constructores
 	
 	public Libro(String isbn, String titulo, String autor, int numPaginas)
 	{
@@ -12,12 +19,16 @@ public class Libro {
 		this.autor = autor;
 		this.numPaginas = numPaginas;
 	}
+	
+	//ToString reescrito
 
 	@Override
 	public String toString() {
 		return "El libro " + titulo + " con ISBN " + isbn + " creado por el autor " + autor + " tiene " + numPaginas + " páginas.";
 	}
 
+	//Getters y Setters
+	
 	public String getIsbn() {
 		return isbn;
 	}
@@ -50,6 +61,11 @@ public class Libro {
 		this.numPaginas = numPaginas;
 	}
 	
+	/**
+	 * Funcion para comparar que libro tiene mas paginas
+	 * @param libro
+	 * @return
+	 */
 	public boolean compareTo(Libro libro) 
 	{
 		if(this.numPaginas > libro.numPaginas)

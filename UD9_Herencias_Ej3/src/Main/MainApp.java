@@ -1,3 +1,6 @@
+/**
+ * @author JOAN
+ */
 package Main;
 
 import Objetos.Libro;
@@ -11,6 +14,8 @@ public class MainApp {
 		
 		System.out.println(libro1);
 		System.out.println(libro2);
+		
+		//Vemos que libro tiene mas paginas
 		
 		if (libro1.compareTo(libro2)) 
 		{
