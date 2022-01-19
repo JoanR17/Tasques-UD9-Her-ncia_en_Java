@@ -29,8 +29,21 @@ public class MainApp {
 		
 		//Recorrer los array para contar cuantos hay entregados y devolverlos
 		
+		System.out.println("Hay " + entregadosSeries(series) + " series entregadas");
+		System.out.println("Hay " + entregadosVideojuegos(videojuegos) + " videojuegos entregados");
+		
+		System.out.println("\nLa serie con mas temporadas es " + maxTemporadasSeries(series).getTitulo() + " con " + maxTemporadasSeries(series).getNumTemporadas() + " temporadas.");
+		System.out.println("El videojuego con mas horas estimadas es " + maxHorasVideojuegos(videojuegos).getTitulo() + " con " + maxHorasVideojuegos(videojuegos).getHorasEstimadas() + " horas.");
+	}
+	
+	/**
+	 * Funcion para saber cuantas series hay entregadas
+	 * @param series
+	 * @return
+	 */
+	public static int entregadosSeries(Serie[] series)
+	{
 		int entregadosSeries = 0;
-		int entregadosVideojuegos = 0;
 		for (Serie serie : series) 
 		{
 			if (serie.isEntregado()) 
@@ -39,7 +52,17 @@ public class MainApp {
 				serie.devolver();
 			}
 		}
-		
+		return entregadosSeries;
+	}
+	
+	/**
+	 * Funcion para saber cuantos videojuegos hay entregados
+	 * @param videojuegos
+	 * @return
+	 */
+	public static int entregadosVideojuegos(Videojuego[] videojuegos)
+	{
+		int entregadosVideojuegos = 0;
 		for (Videojuego videojuego : videojuegos) 
 		{
 			if (videojuego.isEntregado()) 
@@ -49,26 +72,43 @@ public class MainApp {
 			}
 		}
 		
-		System.out.println("Hay " + entregadosSeries + " series entregadas");
-		System.out.println("Hay " + entregadosVideojuegos + " videojuegos entregados");
-		
-		int serieMasTemporadas = 0;
-		int videojuegoMasHoras = 0;
-		
-		for(int i = 1; i < series.length; i++) {
-			if (series[i].compareTo(series[serieMasTemporadas])) 
+		return entregadosVideojuegos;
+	}
+	
+	/**
+	 * Funcion para saber que serie tiene mas temporadas
+	 * @param series
+	 * @return
+	 */
+	public static Serie maxTemporadasSeries(Serie[] series)
+	{
+		Serie serieMasTemporadas = series[0];
+		for(int i = 1; i < series.length; i++) 
+		{
+			if (series[i].compareTo(serieMasTemporadas)) 
 			{
-				serieMasTemporadas = i;
-			}
-			
-			if (videojuegos[i].compareTo(videojuegos[videojuegoMasHoras])) 
-			{
-				videojuegoMasHoras = i;
+				serieMasTemporadas = series[i];
 			}
 		} 
-		
-		System.out.println("\nLa serie con mas temporadas es " + series[serieMasTemporadas].getTitulo() + " con " + series[serieMasTemporadas].getNumTemporadas() + " temporadas.");
-		System.out.println("El videojuego con mas horas estimadas es " + videojuegos[videojuegoMasHoras].getTitulo() + " con " + videojuegos[videojuegoMasHoras].getHorasEstimadas() + " horas.");
+		return serieMasTemporadas;
+	}
+	
+	/**
+	 * Funcion para saber que videojuego tiene mas horas
+	 * @param videojuegos
+	 * @return
+	 */
+	public static Videojuego maxHorasVideojuegos(Videojuego[] videojuegos)
+	{
+		Videojuego videojuegoMasHoras = videojuegos[0];
+		for(int i = 1; i < videojuegos.length; i++) 
+		{
+			if (videojuegos[i].compareTo(videojuegoMasHoras)) 
+			{
+				videojuegoMasHoras = videojuegos[i];
+			}
+		} 
+		return videojuegoMasHoras;
 	}
 
 }

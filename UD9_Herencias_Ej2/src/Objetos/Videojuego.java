@@ -2,9 +2,13 @@ package Objetos;
 
 public class Videojuego implements Entregable {
 	
+	//Atributos
+
 	private String titulo, genero, compania;
 	private int horasEstimadas;
 	private boolean entregado;
+	
+	//Constructores
 	
 	public Videojuego() 
 	{
@@ -33,6 +37,8 @@ public class Videojuego implements Entregable {
 		this.entregado = false;
 	}
 
+	//Getters y Setters
+	
 	public String getTitulo() {
 		return titulo;
 	}
@@ -64,12 +70,16 @@ public class Videojuego implements Entregable {
 	public void setHorasEstimadas(int horasEstimadas) {
 		this.horasEstimadas = horasEstimadas;
 	}
+	
+	//ToString reescrito
 
 	@Override
 	public String toString() {
 		return "Videojuego [titulo=" + titulo + ", genero=" + genero + ", compania=" + compania + ", horasEstimadas="
 				+ horasEstimadas + ", entregado=" + entregado + "]";
 	}
+
+	//Metodos de la interfaz
 
 	@Override
 	public void entregar() 
@@ -92,7 +102,7 @@ public class Videojuego implements Entregable {
 	@Override
 	public boolean compareTo(Object object) 
 	{
-		if(this.horasEstimadas > ((Videojuego)object).getHorasEstimadas())
+		if(horasEstimadas > ((Videojuego)object).getHorasEstimadas())
 		{
 			return true;
 		}

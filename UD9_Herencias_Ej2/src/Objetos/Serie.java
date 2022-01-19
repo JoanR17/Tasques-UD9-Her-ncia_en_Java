@@ -1,10 +1,14 @@
 package Objetos;
 
 public class Serie implements Entregable{
+	
+	//Atributos
 
 	private String titulo, creador, genero;
 	private int numTemporadas;
 	private boolean entregado;
+	
+	//Constructores
 	
 	public Serie()
 	{
@@ -33,6 +37,8 @@ public class Serie implements Entregable{
 		this.entregado = false;
 	}
 
+	//Getters y Setters
+	
 	public String getTitulo() {
 		return titulo;
 	}
@@ -64,6 +70,8 @@ public class Serie implements Entregable{
 	public void setNumTemporadas(int numTemporadas) {
 		this.numTemporadas = numTemporadas;
 	}
+	
+	//ToString reescrito
 
 	@Override
 	public String toString() {
@@ -71,6 +79,8 @@ public class Serie implements Entregable{
 				+ numTemporadas + ", entregado=" + entregado + "]";
 	}
 
+	//Metodos de la interfaz
+	
 	@Override
 	public void entregar() 
 	{
@@ -92,7 +102,7 @@ public class Serie implements Entregable{
 	@Override
 	public boolean compareTo(Object object) 
 	{
-		if(this.numTemporadas > ((Serie)object).getNumTemporadas())
+		if(numTemporadas > ((Serie)object).getNumTemporadas())
 		{
 			return true;
 		}
