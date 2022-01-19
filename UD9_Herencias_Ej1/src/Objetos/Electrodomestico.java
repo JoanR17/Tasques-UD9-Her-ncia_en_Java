@@ -1,15 +1,26 @@
 package Objetos;
 
+/**
+ * @author Adrián Rodriguez
+ */
+
 public class Electrodomestico {
+	
+	//Constantes
+	
 	private final static double PRECIO = 100;
 	private final static String COLOR = "blanco";
 	private final static char CONSUMO = 'F';
 	private final double PESO = 5;
 	
+	//Atributos
+	
 	protected double precio_base;
 	protected String color;
 	protected char consumo_energetico;
 	protected double peso;
+	
+	//Constructores
 	
 	public Electrodomestico() {
 		this.precio_base = PRECIO;
@@ -31,6 +42,8 @@ public class Electrodomestico {
 		this.consumo_energetico = consumo_energetico;
 		this.peso = peso;
 	}
+	
+	//Getters y Setters
 	
 	public double getPrecio_base() {
 		return precio_base;
@@ -64,6 +77,8 @@ public class Electrodomestico {
 		this.peso = peso;
 	}
 	
+	//Método comprobarColor
+	
 	public void comprobarColor(String color) {
 		String colores[] = {"blanco", "negro", "rojo", "azul", "gris"};
 		boolean correcto = false;
@@ -81,6 +96,8 @@ public class Electrodomestico {
 		}
 	}
 	
+	//Método comprobarConsumo
+	
 	public void comprobarConsumo (char consumo_energetico) {
 		if (consumo_energetico >= 65 && consumo_energetico <= 70) {
 			this.consumo_energetico = consumo_energetico;
@@ -88,6 +105,8 @@ public class Electrodomestico {
 			this.consumo_energetico = CONSUMO;
 		}
 	}
+	
+	//Método precioFinal
 	
 	public double precioFinal() {
 		double precioF = 0;
@@ -125,6 +144,8 @@ public class Electrodomestico {
 		}
 		return precio_base + precioF;
 	}
+	
+	//Método toString
 
 	public String toString() {
 		return "Electrodomestico [precio_base=" + precio_base + ", color=" + color + ", consumo_energetico="

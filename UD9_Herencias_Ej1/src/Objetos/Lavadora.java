@@ -1,9 +1,20 @@
 package Objetos;
 
+/**
+ * @author Adrián Rodriguez
+ */
+
 public class Lavadora extends Electrodomestico {
 	
+	//Constante
+	
 	private final int CARGA = 5;
+	
+	//Atributo
+	
 	private int carga;
+	
+	//Constructores
 	
 	public Lavadora() {
 		this.carga = CARGA;
@@ -18,10 +29,14 @@ public class Lavadora extends Electrodomestico {
 		super(precio_base, color, consumo_energetico, peso);
 		this.carga = carga;
 	}
+	
+	//Getter de carga
 
 	public int getCarga() {
 		return carga;
 	}
+	
+	//Método precioFinal
 	
 	public double precioFinal() {
 		double precioF = super.precioFinal();

@@ -1,12 +1,22 @@
 package Objetos;
 
+/**
+ * @author Adrián Rodriguez
+ */
+
 public class Television extends Electrodomestico {
 
+	//Constantes
+	
 	private final static int RESOLUCION = 20;
 	private final static boolean SINTONIZADOR = false;
 	
+	//Atributos
+	
 	private int resolucion;
 	private boolean sintonizadorTDT;
+	
+	//Constructores
 	
 	public Television() {
 		this.resolucion = RESOLUCION;
@@ -24,6 +34,8 @@ public class Television extends Electrodomestico {
 		this.resolucion = resolucion;
 		this.sintonizadorTDT = sintonizadorTDT;
 	}
+	
+	//Getters resolucion y sintonizadorTDT
 
 	public int getResolucion() {
 		return resolucion;
@@ -32,6 +44,8 @@ public class Television extends Electrodomestico {
 	public boolean isSintonizadorTDT() {
 		return sintonizadorTDT;
 	}
+	
+	//Método precioFinal
 	
 	public double precioFinal() {
 		double precioF = super.precioFinal();
