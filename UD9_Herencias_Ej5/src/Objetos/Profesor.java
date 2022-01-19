@@ -1,10 +1,16 @@
+/**
+ * @author JOAN
+ */
 package Objetos;
 
 public class Profesor extends Persona {
 	
+	//Atributos
+	
 	private String materia;
 	private boolean disponible;
 	
+	//Constructor
 	
 	public Profesor(String nombre, String materia, int edad, char sexo) 
 	{
@@ -13,7 +19,11 @@ public class Profesor extends Persona {
 		this.disponible = calcularProbabilidad();;
 	}
 
-
+	/**
+	 * Funcion para comprobar que la materia del profesor sea correcta
+	 * @param materia
+	 * @return
+	 */
 	private String comprobarMateria(String materia) 
 	{
 		if(materia.equalsIgnoreCase("matemáticas") || materia.equalsIgnoreCase("filosofía") || materia.equalsIgnoreCase("física"))
@@ -23,12 +33,18 @@ public class Profesor extends Persona {
 		return "matemáticas";
 	}
 
-
+	/**
+	 * Funcion para calcular la probabilidad de que el profesor venga 
+	 * @return
+	 */
 	private boolean calcularProbabilidad() 
 	{
 		return (0.2 < Math.random());
 	}
 
+
+	//Getters y Setters
+	
 
 	public String getMateria() {
 		return materia;

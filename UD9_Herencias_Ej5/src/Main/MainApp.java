@@ -1,3 +1,6 @@
+/**
+ * @author JOAN
+ */
 package Main;
 
 import Objetos.*;
@@ -9,6 +12,7 @@ public class MainApp {
 		Aula aula = new Aula(112, 24, "Matemáticas");
 		Estudiante[] estudiantes = new Estudiante[aula.getNumMaxEstudiantes()];
 		Profesor profe = new Profesor("Jose", "Matemáticas", (int)(Math.random()*(65+1-20)+20), 'H');
+
 
 		rellenarEstudiantes(estudiantes);
 		
@@ -40,6 +44,10 @@ public class MainApp {
 		}
 	}
 
+	/**
+	 * Funcion para mostrar alumnos aprovados
+	 * @param estudiantes
+	 */
 	private static void mostrarAlumnosAprovados(Estudiante[] estudiantes) 
 	{
 		String chicos = "Alumnos aprovados:\n", chicas = "Alumnas aprovadas:\n";
@@ -64,6 +72,13 @@ public class MainApp {
 		
 	}
 
+	/**
+	 * Funcion para comprobar si se cumplen las condiciones para hacer clase
+	 * @param estudiantes
+	 * @param profe
+	 * @param aula
+	 * @return
+	 */
 	private static boolean sePuedeDarClase(Estudiante[] estudiantes, Profesor profe, Aula aula) 
 	{
 		if(!profe.isDisponible())
@@ -88,6 +103,10 @@ public class MainApp {
 		return (cont >= (aula.getNumMaxEstudiantes() / 2));
 	}
 
+	/**
+	 * Funcion para rellenar estudiantes en el array
+	 * @param estudiantes
+	 */
 	private static void rellenarEstudiantes(Estudiante[] estudiantes) 
 	{
 

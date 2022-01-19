@@ -1,11 +1,17 @@
+/**
+ * @author JOAN
+ */
 package Objetos;
 
 public abstract class Persona {
+	
+	//Atributos
 	
 	private String nombre;
 	private int edad;
 	private char sexo;
 	
+	//Constructor
 	
 	public Persona(String nombre, int edad, char sexo) 
 	{
@@ -14,7 +20,11 @@ public abstract class Persona {
 		this.sexo = sexoCorrecto(sexo);
 	}
 
-
+	/**
+	 * Funcion para comprobar que el sexo introducido sea correcto
+	 * @param sexo2
+	 * @return
+	 */
 	private char sexoCorrecto(char sexo2) 
 	{
 		if(sexo2 == 'H' || sexo2 == 'M')
@@ -28,6 +38,9 @@ public abstract class Persona {
 		return 'H';
 	}
 
+
+	//Getters y Setters
+	
 
 	public String getNombre() {
 		return nombre;
