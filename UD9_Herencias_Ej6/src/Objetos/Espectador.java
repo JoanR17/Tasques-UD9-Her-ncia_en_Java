@@ -2,9 +2,13 @@ package Objetos;
 
 public class Espectador {
 
+	//Atributos
+	
 	private String nombre;
 	private int edad;
 	private double dinero;
+	
+	//Constructor
 	
 	public Espectador(String nombre, int edad, double dinero) 
 	{
@@ -12,6 +16,10 @@ public class Espectador {
 		this.edad = edad;
 		this.dinero = dinero;
 	}
+
+
+	//Getters y Setters
+	
 
 	public String getNombre() 
 	{

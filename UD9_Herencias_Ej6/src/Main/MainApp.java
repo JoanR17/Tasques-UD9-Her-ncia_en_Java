@@ -20,6 +20,13 @@ public class MainApp {
 
 	}
 
+	/**
+	 * Funcion para sentar un array de espectadores en la sala de cine
+	 * @param espectadores
+	 * @param sala
+	 * @param cine
+	 * @param peli
+	 */
 	private static void sentarEspectadores(Espectador[] espectadores, String[][] sala, Cine cine, Pelicula peli) 
 	{
 
@@ -53,6 +60,10 @@ public class MainApp {
 		
 	}
 
+	/**
+	 * Funcion para crear una sala de cine
+	 * @param sala
+	 */
 	private static void rellenarSala(String[][] sala) 
 	{
 		int x = 8;
@@ -69,6 +80,10 @@ public class MainApp {
 		
 	}
 
+	/**
+	 * Funcion para crear Espectadores aleatorios
+	 * @param espectadores
+	 */
 	private static void rellenarEspectadores(Espectador[] espectadores) 
 	{
 		String[] nombres = {"Joan", "Olga", "Eric", "Jordi", "Kevin", "Jonathan", "Robert", "Laura", "Andrea", "Enya"};
@@ -80,6 +95,10 @@ public class MainApp {
 		
 	}
 
+	/**
+	 * Funcion para mostrar la sala de cine por pantalla
+	 * @param sala
+	 */
 	private static void mostrarSala(String[][] sala) 
 	{
 		for (String[] strings : sala) 
